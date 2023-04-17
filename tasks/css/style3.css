@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:regular,700');
+
+body {
+    font-family: 'Lato';
+    background-image: url(https://wallpaperaccess.com/full/2735406.jpg);
+}
+
+.title {
+    padding-top: 100px;
+}
+
+h1 {
+    display: block;
+    max-width: 170px;
+    margin: 0 auto;
+    text-shadow: 2px 2px 4px #000;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(251, 255, 26);
+    font-weight: 700;
+}
+
+p {
+    padding-top: 10px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    max-width: 1000px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.res {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.snowflakes {
+    position: absolute;
+    animation: snowflakes 0.3s infinite linear;
+}
+
+@keyframes snowflakes {
+    0% {
+        transform: translateY(0vh);
+    }    
+    100% {
+        transform: translateY(100vh);
+    }
+}
+.item {
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    animation: size 0.3s infinite linear;
+}
+
+@keyframes item {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+    }
+}

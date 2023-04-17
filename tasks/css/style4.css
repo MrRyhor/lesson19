@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:regular,700');
+
+body {
+    font-family: 'Lato';
+    background-image: url(https://wallpapershome.com/images/pages/pic_h/421.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.title {
+    padding-top: 100px;
+}
+
+h1 {
+    display: block;
+    max-width: 170px;
+    margin: 0 auto;
+    text-shadow: 2px 2px 4px #000;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(251, 255, 26);
+    font-weight: 700;
+}
+
+p {
+    padding-top: 10px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    max-width: 1000px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.res {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #fff;
+    opacity: 0;
+    animation: star 1 linear;
+}
+
+@keyframes star {
+    0% {
+        opacity: 0.5;
+        transform: scale(0.5) rotate(45deg);
+    }    
+    50% {
+        opacity: 1;
+        transform: scale(1) rotate(45deg);
+    }  
+    100% {
+        opacity: 0;
+        transform: scale(0) rotate(45deg);
+    }
+}
