@@ -58,22 +58,7 @@ p {
     width: 60px;
     height: 60px;
     background-image: url(../img/tank.png);
-    background-size: cover;
-    animation: size 0.3s infinite linear;    
-}
-
-@keyframes item {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 1;
-    }
+    background-size: cover;       
 }
 .explode{
     transform: scale(0);

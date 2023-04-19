@@ -23,7 +23,16 @@ class SportsmensList {
         }
         this.render()
     }
-    renderAllNames() {
+    // getSportsmenInList(namesList, name, resultList) {
+    //     for (let i = 0; i < namesList.length; i++) {
+    //         if (name === namesList[i]) {
+    //             resultList.push(namesList[i])
+    //             namesList.splice(i, 1)
+    //         }
+    //     }
+    //     this.render()
+    // }
+    createAllNamesList() {
         const allNamesContainer = document.createElement('div')
         allNamesContainer.className = 'name-list-container'
         const ul = document.createElement('ul')
@@ -45,7 +54,7 @@ class SportsmensList {
         }
         return allNamesContainer
     }
-    renderNamesListInCompetitions() {
+    createNamesListInCompetitions() {
         const namesListInCompetitions = document.createElement('div')
         namesListInCompetitions.className = 'name-list-container'
         const ul = document.createElement('ul')
@@ -65,14 +74,45 @@ class SportsmensList {
             arrow2.onclick = this.outSportsmenFromCompetition.bind(this, name)
             li.append(arrow2)
         }
+        
         return namesListInCompetitions
     }
+    // createSportsmensList(namesList, titleTable, imgSrc, resultList) {
+    //     const allNamesContainer = document.createElement('div')
+    //     allNamesContainer.className = 'name-list-container'
+    //     const ul = document.createElement('ul')
+    //     ul.className = 'name-list'
+    //     const title = document.createElement('h2')
+    //     title.innerText = titleTable
+    //     ul.append(title)
+    //     allNamesContainer.append(ul)
+    //     for (const name of namesList) {
+    //         const li = document.createElement('li')
+    //         li.className = 'li'
+    //         li.innerText = name
+    //         ul.append(li)
+    //         const arrow = document.createElement('img')
+    //         arrow.setAttribute('id', 'arrow')
+    //         arrow.src = imgSrc
+    //         arrow.onclick = this.getSportsmenInList.bind(this, nameList, name, resultList)
+    //         li.append(arrow)
+    //     }
+    //     return allNamesContainer
+    // }
     render() {
-        this.resultContainer = document.getElementById('res')
-        this.resultContainer.innerHTML = ''
-        this.resultContainer.append(this.renderAllNames())
-        this.resultContainer.append(this.renderNamesListInCompetitions())
+        const resultContainer = document.getElementById('res')
+        resultContainer.innerHTML = ''
+        resultContainer.append(this.createAllNamesList())
+        resultContainer.append(this.createNamesListInCompetitions())        
     }
+   
+    // render() {
+    //     const resultContainer = document.getElementById('res')
+    //     resultContainer.innerHTML = ''
+    //     resultContainer.append(this.createSportsmensList(this.nameList, 'Список доступных спортсменов', './img/green_arrow.png', this.nameListInCompetition))
+    //     resultContainer.append(this.createSportsmensList(this.nameListInCompetition, 'Список спортсменов в соревнованиях', './img/red_arrow.png', this.nameList))
+    // }
+    
 }
 
 
@@ -80,5 +120,5 @@ const nameList = ['Max Cavalera', 'Philip Anselmo', 'Rob Flynn', 'Chuck Billy', 
 
 window.onload = function () {
     const test = new SportsmensList(nameList)
-    test.render('res')
+    test.render()
 }

@@ -40,19 +40,35 @@ p {
 }
 
 .snowflakes {
+    /* width: 20px;
+    height: 20px; */
+    /* background-image: url(../img/snowflake.png); */
+    /* background-size: cover; */
+    width: 4px;
+    height: 4px;
+    background: #fff;
     position: absolute;
     animation: snowflakes 0.3s infinite linear;
+
 }
 
 @keyframes snowflakes {
     0% {
-        transform: translateY(0vh);
-    }    
+        transform: translateY(0vh) rotate(0deg);
+        opacity: 1;
+    }
+
+    70%{
+        opacity: 0.8;
+    }
+
     100% {
-        transform: translateY(100vh);
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.3;
     }
 }
-.item {
+
+/* .item {
     width: 4px;
     height: 4px;
     background: #fff;
@@ -68,7 +84,8 @@ p {
     50% {
         opacity: 0.8;
     }
+
     100% {
         opacity: 0;
     }
-}
+} */
