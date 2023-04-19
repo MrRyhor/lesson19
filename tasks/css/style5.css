@@ -30,6 +30,7 @@ p {
     font-size: 20px;
     font-weight: 400;
 }
+
 .res {
     position: absolute;
     top: 0;
@@ -58,10 +59,12 @@ p {
     width: 60px;
     height: 60px;
     background-image: url(../img/tank.png);
-    background-size: cover;       
-}
-.explode{
-    transform: scale(0);
+    background-size: cover;
 }
 
-
+.explode {
+    background-image: url(../img/explosion.png);
+    background-size: cover;
+    transform: scale(2);
+    transition: 0.1s;
+}

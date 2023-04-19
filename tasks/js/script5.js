@@ -15,7 +15,7 @@ class Bayraktar {
         tank.className = 'tank'
         tank.style.left = `${this.getRandomPosition()}%`
         tank.style.animationDelay = `0.${this.getRandomAnimation()}s`
-        tank.style.animationDuration = `5.${this.getRandomAnimation()}s`        
+        tank.style.animationDuration = `5.${this.getRandomAnimation()}s`
         this.item = document.createElement('div')
         this.item.className = 'item'
         this.item.style.animationDelay = `${this.getRandomAnimation()}s`
@@ -27,8 +27,12 @@ class Bayraktar {
 
         tank.onclick = this.getShot.bind(this)
     }
-    getShot(){
-        this.item.classList.add('explode')     
+    getShot() {
+        this.item.classList.add('explode')
+        setInterval(() => {
+            this.item.classList.remove('explode')
+            this.item.classList.remove('item')
+        }, 300);     
     }
 
 }
